@@ -10,7 +10,7 @@ class CalculatorTests(unittest.TestCase):
     def test_standard_proportional_calculation(self):
         result = calculate_utilities({
             "period": "Ноябрь 2026",
-            # Свет: Настя Толя = 150, Юля и Ефим = 100 (всего 250 -> 60% и 40%), счёт 1000 -> 600 и 400
+            # Свет: Настя Толя = 150, Юля Ефим = 100 (всего 250 -> 60% и 40%), счёт 1000 -> 600 и 400
             "elec_h1_prev": "1000",
             "elec_h1_curr": "1150",
             "elec_h2_prev": "500",
@@ -28,7 +28,7 @@ class CalculatorTests(unittest.TestCase):
         })
 
         self.assertEqual(result["house1_name"], "Настя Толя")
-        self.assertEqual(result["house2_name"], "Юля и Ефим")
+        self.assertEqual(result["house2_name"], "Юля Ефим")
         self.assertEqual(result["electricity"]["house1"]["diff"], "150")
         self.assertEqual(result["electricity"]["house2"]["diff"], "100")
         self.assertEqual(result["electricity"]["house1"]["cost"], "600.00")

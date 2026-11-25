@@ -8,7 +8,7 @@ TWO_PLACES = Decimal("0.01")
 ONE_PLACE = Decimal("0.1")
 
 HOUSE1_NAME = "Настя Толя"
-HOUSE2_NAME = "Юля и Ефим"
+HOUSE2_NAME = "Юля Ефим"
 
 
 class CalculationError(ValueError):
